@@ -10,8 +10,8 @@ namespace BoxService.Models
     {
         public int Id { get; set; }
         [Display(AutoGenerateField = false)]
-        public virtual int MemberId { get; set; }
         public string Name { get; set; }
+        public List<string> Contents { get; set; }
         public string Category { get; set; }
         public string Description { get; set; }
         [DisplayFormat(DataFormatString = "{0}:C")]
