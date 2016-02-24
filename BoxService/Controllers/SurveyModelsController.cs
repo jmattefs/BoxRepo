@@ -70,6 +70,7 @@ namespace BoxService.Controllers
         {
             if (ModelState.IsValid)
             {
+                /*db.SurveyResponses.Select(x => x).Where(x => x.Age < 21); */ //will give all survey responses where age is < 21
                 db.SurveyResponses.Add(surveyModel);
                 db.SaveChanges();
                 return RedirectToAction("Index");
