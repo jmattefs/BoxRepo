@@ -22,7 +22,7 @@ namespace BoxService.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult GoToSurvey([Bind(Include = "ID,gender,age,maxMoney,alcohol,presentable, books, candles, candy, clothes, coffee, fitness, games, movies, music, sports, active, candle, entertainment, foodORdrink, appearance")] SurveyModel surveyModel)
+        public ActionResult GoToSurvey([Bind(Include = "ID,gender,age,Money,alcohol,presentable, books, candles, candy, clothes, coffee, fitness, games, movies, music, sports, active, candle, entertainment, foodORdrink, appearance")] SurveyModel surveyModel)
         {
             if (ModelState.IsValid)
             {
@@ -67,7 +67,7 @@ namespace BoxService.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,gender,age,maxMoney,alcohol,presentable,books,candles,candy,clothes,coffee,fitness,games,movies,music,sports,active,candle,entertainment,foodORdrink,appearance")] SurveyModel surveyModel)
+        public ActionResult Create([Bind(Include = "ID,gender,age,Money,alcohol,presentable,books,candles,candy,clothes,coffee,fitness,games,movies,music,sports,active,candle,entertainment,foodORdrink,looks")] SurveyModel surveyModel)
         {
             if (ModelState.IsValid)
             {
@@ -75,7 +75,7 @@ namespace BoxService.Controllers
                 db.SaveChanges();
                // int y = surveyModel.Age;
                // db.SurveyResponses.Select(x => x).Where(x => x.Age < 21);
-                return RedirectToAction("GetCurrentSurveyResults",surveyModel);
+                return RedirectToAction("Index");  //change "Index" to "GetCurrentSurveyResults" and add ,surveyModel
             }
 
             return View(surveyModel);
@@ -101,7 +101,7 @@ namespace BoxService.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,gender,age,maxMoney,alcohol,presentable,books,candles,candy,clothes,coffee,fitness,games,movies,music,sports,active,candle,entertainment,foodORdrink,appearance")] SurveyModel surveyModel)
+        public ActionResult Edit([Bind(Include = "ID,gender,age,Money,alcohol,presentable,books,candles,candy,clothes,coffee,fitness,games,movies,music,sports,active,candle,entertainment,foodORdrink,looks")] SurveyModel surveyModel)
         {
             if (ModelState.IsValid)
             {
@@ -148,7 +148,29 @@ namespace BoxService.Controllers
         }
         public ActionResult GetCurrentSurveyResults(SurveyModel sm)
         {
-            int y = sm.Age;
+            int age = sm.Age;
+            int money = sm.Money;
+            int active = sm.Active;
+            int candle = sm.Candle;
+            int entertainment = sm.Entertainment;
+            int foodORdrink = sm.foodORdrink;
+            int looks = sm.Looks;
+            int gender = sm.Gender;
+            bool alcohol = sm.Alcohol;
+            bool appearance = sm.Appearance;
+            bool books = sm.Books;
+            bool candles = sm.Candles;
+            bool candy = sm.Candy;
+            bool clothes = sm.Clothes;
+            bool coffee = sm.Coffee;
+            bool fitness = sm.Fitness;
+            bool games = sm.Games;
+            bool movies = sm.Movies;
+            bool music = sm.Music;
+            bool sports = sm.Sports;
+
+
+            
             //db.SurveyResponses.Select(x => x).Where(x => x.Age < 21);
                 return View(sm);
         }
