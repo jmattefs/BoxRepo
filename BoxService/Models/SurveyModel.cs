@@ -9,8 +9,7 @@ namespace BoxService.Models
     public class SurveyModel
     {
         public int ID { get; set; }
-        public bool Male { get; set; }
-        public bool Female { get; set; }
+        public int Gender { get; set; }
         public int Age { get; set; }
         public int Money { get; set; }
         public bool Alcohol {get; set;}
