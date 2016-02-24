@@ -26,6 +26,7 @@ namespace BoxService.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 db.SurveyResponses.Add(surveyModel);
                 db.SaveChanges();
                 return RedirectToAction("Index", surveyModel);
@@ -70,10 +71,11 @@ namespace BoxService.Controllers
         {
             if (ModelState.IsValid)
             {
-                /*db.SurveyResponses.Select(x => x).Where(x => x.Age < 21); */ //will give all survey responses where age is < 21
                 db.SurveyResponses.Add(surveyModel);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+               // int y = surveyModel.Age;
+               // db.SurveyResponses.Select(x => x).Where(x => x.Age < 21);
+                return RedirectToAction("GetCurrentSurveyResults",surveyModel);
             }
 
             return View(surveyModel);
@@ -105,7 +107,7 @@ namespace BoxService.Controllers
             {
                 db.Entry(surveyModel).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("GetSurveyResults"); //change from index to results page
             }
             return View(surveyModel);
         }
@@ -143,6 +145,12 @@ namespace BoxService.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+        public ActionResult GetCurrentSurveyResults(SurveyModel sm)
+        {
+            int y = sm.Age;
+            //db.SurveyResponses.Select(x => x).Where(x => x.Age < 21);
+                return View(sm);
         }
     }
 }
