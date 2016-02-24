@@ -1,0 +1,107 @@
+﻿@model BoxService.Models.SurveyModel
+@{
+    ViewBag.Title = "Survey";
+    Layout = "~/views/shared/_layout.cshtml";
+
+    
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Survey</title>
+</head>
+<body>
+    <h1>    Box Recommendation Survey</h1>
+    <div>
+        @*<form action="@Url.Action( "GoToSurvey", "SurveyController")" method="post">*@
+            <font size="5">Male or Female?</font><br>
+            <font size="4">                
+                <input type="radio" name="gender" value="male"> Male<br>
+                <input type="radio" name="gender" value="female"> Female<br>
+                <input type="radio" name="gender" value="both"> Both<br><br>
+            </font>
+            <font size="5">How old are you?</font><br>
+            <font size="4" color="black">
+                <select name="age">
+                    <option value=>
+                    <option value=1> 14-20
+                    <option value=2> 21-30
+                    <option value=3> Over 30
+                </select><br><br>
+            </font>
+            <font size="5">What is the most you are willing to spend on a box per month?</font><br>
+            <font size="4">
+                <input type="radio" name="price" value="10"> $10<br>
+                <input type="radio" name="price" value="25"> $25<br>
+                <input type="radio" name="price" value="50"> $50<br><br>
+            </font>
+            <font size="5">Select some of your interests...</font><br>
+            <font size="4">
+                <input type="checkbox" name="interest1" value="alcohol"> Alcohol<br>
+                <input type="checkbox" name="interest8" value="looknice"> Appearing presentable<br>
+                <input type="checkbox" name="interest2" value="books"> Books<br>
+                <input type="checkbox" name="interest12" value="candle"> Candles<br>
+                <input type="checkbox" name="interest3" value="candy"> Candy<br>
+                <input type="checkbox" name="interest4" value="clothes"> Clothes<br>
+                <input type="checkbox" name="interest5" value="coffee"> Coffee<br>
+                <input type="checkbox" name="interest6" value="fitness"> Fitness<br>
+                <input type="checkbox" name="interest7" value="games"> Games<br>
+                <input type="checkbox" name="interest9" value="movies"> Movies<br>
+                <input type="checkbox" name="interest10" value="music"> Music<br>
+                <input type="checkbox" name="interest11" value="sports"> Sports<br>
+            </font>
+            <br>
+            <font size="5">How interested are you in the following things?</font><br>
+            <font size="4">Being Active</font><br>
+            <font color="black">
+                <select name="active">
+                    <option value=>
+                    <option value=1> Not interested
+                    <option value=2> Somewhat interested
+                    <option value=3> Very Interested
+                </select><br><br>
+            </font>
+            <font size="4">Candles</font><br>
+            <font color="black">
+                <select name="candles">
+                    <option value=>
+                    <option value=1> Not interested
+                    <option value=2> Somewhat interested
+                    <option value=3> Very Interested
+                </select><br><br>
+            </font>
+                <font size="4">Entertainment</font><br>
+            <font color="black">
+                <select name="entertainment">
+                    <option value=>
+                    <option value=1> Not interested
+                    <option value=2> Somewhat interested
+                    <option value=3> Very Interested
+                </select><br><br>
+            </font>
+                    <font size="4">Food/Drink</font><br>
+            <font color="black">
+                <select name="fooddrink">
+                    <option value=>
+                    <option value=1> Not interested
+                    <option value=2> Somewhat interested
+                    <option value=3> Very Interested
+                </select><br><br>
+            </font>
+                        <font size="4">Your Appearance</font><br>
+            <font color="black">
+                <select name="appearance">
+                    <option value=>
+                    <option value=1> Not interested
+                    <option value=2> Somewhat interested
+                    <option value=3> Very Interested
+                </select><br><br>
+            </font>
+                            <input type="submit">
+@*</form>*@
+    </div>
+</body>
+</html>

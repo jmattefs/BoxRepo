@@ -1,0 +1,184 @@
+﻿@model BoxService.Models.SurveyModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>SurveyModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.maxMoney)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.maxMoney)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.alcohol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.alcohol)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.presentable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.presentable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.books)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.books)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.candles)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.candles)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.candy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.candy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.clothes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.clothes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.coffee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.coffee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fitness)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fitness)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.games)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.games)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.movies)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.movies)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.music)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.music)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sports)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sports)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.active)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.candle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.candle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.entertainment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.entertainment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.foodORdrink)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.foodORdrink)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.appearance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.appearance)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
