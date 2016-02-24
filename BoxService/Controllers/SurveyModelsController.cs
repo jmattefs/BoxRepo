@@ -148,7 +148,26 @@ namespace BoxService.Controllers
         }
         public ActionResult GetCurrentSurveyResults(SurveyModel sm)
         {
-            int y = sm.Age;
+            int age = sm.Age;
+            int money = sm.Money;
+            int active = sm.Active;
+            int candle = sm.Candle;
+            int entertainment = sm.Entertainment;
+            int foodORdrink = sm.foodORdrink;
+            int looks = sm.Looks;
+            bool alcohol = sm.Alcohol;
+            bool appearance = sm.Appearance;
+            bool books = sm.Books;
+            bool candles = sm.Candles;
+            bool candy = sm.Candy;
+            bool clothes = sm.Clothes;
+            bool coffee = sm.Coffee;
+            bool fitness = sm.Fitness;
+            bool games = sm.Games;
+            bool movies = sm.Movies;
+            bool music = sm.Music;
+            bool sports = sm.Sports;
+            
             //db.SurveyResponses.Select(x => x).Where(x => x.Age < 21);
                 return View(sm);
         }
