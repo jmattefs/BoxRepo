@@ -13,64 +13,67 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.gender)
+            @Html.DisplayNameFor(model => model.Male)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.age)
+            @Html.DisplayNameFor(model => model.Female)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.maxMoney)
+            @Html.DisplayNameFor(model => model.Age)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.alcohol)
+            @Html.DisplayNameFor(model => model.Money)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.presentable)
+            @Html.DisplayNameFor(model => model.Alcohol)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.books)
+            @Html.DisplayNameFor(model => model.Appearance)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.candles)
+            @Html.DisplayNameFor(model => model.Books)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.candy)
+            @Html.DisplayNameFor(model => model.Candles)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.clothes)
+            @Html.DisplayNameFor(model => model.Candy)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.coffee)
+            @Html.DisplayNameFor(model => model.Clothes)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.fitness)
+            @Html.DisplayNameFor(model => model.Coffee)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.games)
+            @Html.DisplayNameFor(model => model.Fitness)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.movies)
+            @Html.DisplayNameFor(model => model.Games)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.music)
+            @Html.DisplayNameFor(model => model.Movies)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.sports)
+            @Html.DisplayNameFor(model => model.Music)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.active)
+            @Html.DisplayNameFor(model => model.Sports)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.candle)
+            @Html.DisplayNameFor(model => model.Active)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.entertainment)
+            @Html.DisplayNameFor(model => model.Candle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Entertainment)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.foodORdrink)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.appearance)
+            @Html.DisplayNameFor(model => model.Looks)
         </th>
         <th></th>
     </tr>
@@ -78,64 +81,67 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.gender)
+            @Html.DisplayFor(modelItem => item.Male)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.age)
+            @Html.DisplayFor(modelItem => item.Female)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.maxMoney)
+            @Html.DisplayFor(modelItem => item.Age)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.alcohol)
+            @Html.DisplayFor(modelItem => item.Money)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.presentable)
+            @Html.DisplayFor(modelItem => item.Alcohol)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.books)
+            @Html.DisplayFor(modelItem => item.Appearance)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.candles)
+            @Html.DisplayFor(modelItem => item.Books)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.candy)
+            @Html.DisplayFor(modelItem => item.Candles)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.clothes)
+            @Html.DisplayFor(modelItem => item.Candy)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.coffee)
+            @Html.DisplayFor(modelItem => item.Clothes)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.fitness)
+            @Html.DisplayFor(modelItem => item.Coffee)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.games)
+            @Html.DisplayFor(modelItem => item.Fitness)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.movies)
+            @Html.DisplayFor(modelItem => item.Games)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.music)
+            @Html.DisplayFor(modelItem => item.Movies)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.sports)
+            @Html.DisplayFor(modelItem => item.Music)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.active)
+            @Html.DisplayFor(modelItem => item.Sports)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.candle)
+            @Html.DisplayFor(modelItem => item.Active)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.entertainment)
+            @Html.DisplayFor(modelItem => item.Candle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Entertainment)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.foodORdrink)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.appearance)
+            @Html.DisplayFor(modelItem => item.Looks)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |

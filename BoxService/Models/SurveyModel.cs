@@ -9,27 +9,27 @@ namespace BoxService.Models
     public class SurveyModel
     {
         public int ID { get; set; }
-        public int gender { get; set; }
-      
-        public int age { get; set; }
-        public int maxMoney { get; set; }
-        public bool alcohol {get; set;}
-        public bool presentable { get; set; }
-        public bool books { get; set; }
-        public bool candles { get; set; }
-        public bool candy { get; set; }
-        public bool clothes { get; set; }
-        public bool coffee { get; set; }
-        public bool fitness { get; set; }
-        public bool games { get; set; }
-        public bool movies { get; set; }
-        public bool music { get; set; }
-        public bool sports { get; set; }
-        public int active { get; set; }
-        public int candle { get; set; }
-        public int entertainment { get; set; }
+        public bool Male { get; set; }
+        public bool Female { get; set; }
+        public int Age { get; set; }
+        public int Money { get; set; }
+        public bool Alcohol {get; set;}
+        public bool Appearance { get; set; }
+        public bool Books { get; set; }
+        public bool Candles { get; set; }
+        public bool Candy { get; set; }
+        public bool Clothes { get; set; }
+        public bool Coffee { get; set; }
+        public bool Fitness { get; set; }
+        public bool Games { get; set; }
+        public bool Movies { get; set; }
+        public bool Music { get; set; }
+        public bool Sports { get; set; }
+        public int Active { get; set; }
+        public int Candle { get; set; }
+        public int Entertainment { get; set; }
         public int foodORdrink { get; set; }
-        public int appearance { get; set; }
+        public int Looks { get; set; }
 
     }
 }
