@@ -201,6 +201,9 @@ namespace BoxService.Controllers
             {
 
             }
+            else if(foodORdrink > 2 && coffee == true){
+
+            }
             else if (looks > 2 && appearance == true)
             {
 
