@@ -73,8 +73,7 @@ namespace BoxService.Controllers
             {
                 db.SurveyResponses.Add(surveyModel);
                 db.SaveChanges();
-               // int y = surveyModel.Age;
-               // db.SurveyResponses.Select(x => x).Where(x => x.Age < 21);
+
                 return RedirectToAction("Index");  //change "Index" to "GetCurrentSurveyResults" and add ,surveyModel
             }
 
@@ -146,7 +145,7 @@ namespace BoxService.Controllers
             }
             base.Dispose(disposing);
         }
-        public ActionResult GetCurrentSurveyResults(SurveyModel sm)
+        public ActionResult GetCurrentSurveyResults(SurveyModel sm, Box box)
         {
             int age = sm.Age;
             int money = sm.Money;
@@ -168,11 +167,49 @@ namespace BoxService.Controllers
             bool movies = sm.Movies;
             bool music = sm.Music;
             bool sports = sm.Sports;
-
-
             
+
+            if (age > 1 && alcohol == true && gender > 1)
+            {
+
+            }
+            else if (age > 1 && alcohol == true && gender < 2)
+            {
+
+            }
+            else if (candle > 2 && candles == true)
+            {
+
+            }
+            else if(active > 2 && fitness == true)
+            {
+
+            }
+            else if(entertainment > 2 && games == true)
+            {
+
+            }
+            else if (entertainment > 2 && movies == true)
+            {
+
+            }
+            else if (entertainment > 2 && music == true)
+            {
+
+            }
+            else if(foodORdrink > 2 && candy == true)
+            {
+
+            }
+            else if(foodORdrink > 2 && coffee == true){
+
+            }
+            else if (looks > 2 && appearance == true)
+            {
+
+            }
             //db.SurveyResponses.Select(x => x).Where(x => x.Age < 21);
-                return View(sm);
+            return View(sm);
         }
     }
 }
